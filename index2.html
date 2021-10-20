@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Numeber of digits</title>
+</head>
+<body>
+    <header id="header">
+        <h1>Count Digits in a Number</h1>
+    </header>
+
+    <nav>
+        <a href="#code">View Code</a>
+        <a href="#contact" style="margin: 10px;">Auther Details</a>
+    </nav>
+    <hr>
+    <section>
+        <h3>Problem Statement:</h2>
+        <h4>Write a code in any programming language that counts the digits in a number.</h4>
+        
+        <article>
+        <h3>Sample Input:</h3>
+        <p><code>Number = 93423</code></p>
+
+        <h3>Sample Output:</h3>
+        <p><samp>Total digits in number = 5</samp></p>
+        </article>
+        <hr>
+        <h3 id="code">Code in c++</h3>
+        <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to <s>copy</s>  code (Windows).<br>
+
+            Press <kbd>Cmd</kbd> + <kbd>C</kbd> to <s>copy</s> code (Mac OS).</p>
+        <pre>
+            <code>#include &ltiostream&gt</code>
+            <code>using namespace std;</code> 
+
+            <code>int main(){</code> 
+                <code>int <var>Number;</var> </code> 
+                <code>cin>>Number;</code>
+                <code>int <var>totalDigits</var>  = 0;</code> 
+
+                <code>while(Number>0){</code> 
+                   <code>totalDigits = totalDigits+1;</code> 
+                   <code>Number/=10;</code> 
+                <code>}</code> 
+
+                <code>cout&lt&lt"Total digits in number = "&lt&lt totalDigits;</code> 
+                <code> return 0;</code>
+            <code>}</code>
+            
+        </pre>
+
+        <h3>algorithm</h3>
+        <p>
+            After each iteration the number gets reduce by 10, means if the number initially of 10<sup>5</sup>, but after iteration it become 0;
+        </p>
+
+        <h3>Complexity</h3>
+        <p>Time Complexity: O(N) where N is digits present in number</p>
+        <hr>
+        <h3 id="code">O(Log<sub>2</sub>N) Solution</h3>
+        <p>Press <kbd>Ctrl</kbd> + <kbd>C</kbd> to <s>copy</s>  code (Windows).<br>
+
+            Press <kbd>Cmd</kbd> + <kbd>C</kbd> to <s>copy</s> code (Mac OS).</p>
+        <pre>
+            <code>#include &ltiostream&gt</code>
+            <code>#include &ltmath.h&gt</code>
+            <code>using namespace std;</code> 
+
+            <code>int main(){</code> 
+                <code>int <var>Number;</var> </code> 
+                <code>cin>>Number;</code>
+                <code>int <var>totalDigits</var>  = log10(Number);</code> 
+
+                <code>cout&lt&lt"Total digits in number = "&lt&lt totalDigits;</code> 
+                <code> return 0;</code>
+            <code>}</code>
+            
+        </pre>
+        <h3>Reference: </h3>
+        <p>Geeksforgeeks</p>
+        <a href="https://www.geeksforgeeks.org/program-count-digits-integer-3-different-methods/"> Click to see more algorithms</a>
+        
+        <hr>
+        <br>
+        <nav>
+            <a href="#header"><small>Move to top</small></a>
+        </nav>
+        
+        
+
+    </section>
+        <footer>
+            <address id="contact">
+                <p><strong>Contact Details:</strong>
+                    Auther <em>Saurabh Nagre</em>  <a href="mailto:saurabh.nage@walchandsangli.ac.in">Click to Mail Me</a>
+                </p>
+            </address>
+        </footer>
+</body>
+</html>
